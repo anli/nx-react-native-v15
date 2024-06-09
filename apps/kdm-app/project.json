@@ -11,7 +11,8 @@
         "commands": [
           "cd android && ./gradlew clean",
           "cd ios && pod install",
-          "cd ios && xcodebuild clean -workspace Today.xcworkspace -scheme Kdm"
+          "cd ios && xcodebuild clean -workspace Kdm.xcworkspace -scheme Kdm",
+          "watchman watch-del-all"
         ],
         "cwd": "apps/kdm-app",
         "parallel": false
