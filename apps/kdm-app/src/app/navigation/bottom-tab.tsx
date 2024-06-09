@@ -1,34 +1,21 @@
+import { ReferencePage } from '@pages/kdm';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Icon, SafeAreaView, Text } from '@shared/ui';
-import { Platform, View } from 'react-native';
+import { Icon } from '@shared/ui';
+import { Platform } from 'react-native';
 import { createMaterialBottomTabNavigator } from 'react-native-paper/react-navigation';
 
 const Tab = createMaterialBottomTabNavigator();
-const ReferenceTabBarIcon = ({ color, focused }: {
-  focused: boolean;
-  color: string;
-}) => (
-  <Icon name={focused ? "book" : "book-outline"} color={color} size={26} />
-)
-
-export const BottomTabs = () => {
-  return (
-    <Tab.Navigator
-      initialRouteName="Feed"
-      safeAreaInsets={{ bottom: Platform.select({ 'ios': 8, default: 0 }) }}
-    >
-      <Tab.Screen
-        name="ReferenceStack"
-        component={HomeStack}
-        options={{
-          tabBarLabel: 'Reference',
-          tabBarIcon: ReferenceTabBarIcon,
-        }}
+const getTabBarIcon =
+  (focusedIconName: string, unfocusedIconName: string) =>
+  ({ color, focused }: { focused: boolean; color: string }) =>
+    (
+      <Icon
+        name={focused ? focusedIconName : unfocusedIconName}
+        color={color}
+        size={24}
       />
-    </Tab.Navigator>
-  );
-}
+    );
 
 const screenOptions = {
   headerShown: false,
@@ -37,22 +24,41 @@ const screenOptions = {
 const Stack =
   Platform.OS === 'ios' ? createNativeStackNavigator() : createStackNavigator();
 
-const HomeStack = () => (
+const ReferenceStack = () => (
   <Stack.Navigator>
     <Stack.Screen
-      name="HomePage"
-      component={HomePage}
+      name="ReferencePage"
+      component={ReferencePage}
       options={screenOptions}
     />
   </Stack.Navigator>
 );
+const configs = [
+  {
+    name: 'ReferenceStack',
+    component: ReferenceStack,
+    tabBarLabel: 'Reference',
+    tabBarIcon: getTabBarIcon('book', 'book-outline'),
+  },
+];
 
-const HomePage = () => {
+export const BottomTabs = () => {
   return (
-    <SafeAreaView edges={['top']}>
-      <View>
-        <Text>Text</Text>
-      </View>
-    </SafeAreaView>
+    <Tab.Navigator
+      initialRouteName="ReferenceStack"
+      safeAreaInsets={{ bottom: 16 }}
+    >
+      {configs.map((_config) => (
+        <Tab.Screen
+          key={_config.name}
+          name={_config.name}
+          component={_config.component}
+          options={{
+            tabBarLabel: _config.tabBarLabel,
+            tabBarIcon: _config.tabBarIcon,
+          }}
+        />
+      ))}
+    </Tab.Navigator>
   );
 };

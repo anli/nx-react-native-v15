@@ -1,5 +1,6 @@
 const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
 const { join } = require('path');
+const { MD3DarkTheme, MD3LightTheme } = require('react-native-paper');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -9,7 +10,10 @@ module.exports = {
   ],
   presets: [require('nativewind/preset')],
   theme: {
-    extend: {},
+    extend: {
+      background: MD3LightTheme.colors.background,
+      'background-dark': MD3DarkTheme.colors.background,
+    },
   },
   plugins: [],
 };
