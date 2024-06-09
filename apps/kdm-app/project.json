@@ -1,9 +1,21 @@
 {
-  "name": "kdm",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/kdm-app/src",
+  "name": "kdm",
   "projectType": "application",
+  "sourceRoot": "apps/kdm-app/src",
   "tags": [],
-  "// targets": "to see all targets run: nx show project kdm --web",
-  "targets": {}
+  "targets": {
+    "clean": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "cd android && ./gradlew clean",
+          "cd ios && pod install",
+          "cd ios && xcodebuild clean -workspace Today.xcworkspace -scheme Kdm"
+        ],
+        "cwd": "apps/kdm-app",
+        "parallel": false
+      }
+    }
+  }
 }
