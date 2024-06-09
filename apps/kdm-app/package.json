@@ -7,12 +7,14 @@
     "@testing-library/jest-native": "*",
     "@testing-library/react-native": "*",
     "metro-config": "*",
+    "nativewind": "*",
     "react": "*",
     "react-native": "*",
     "react-native-gesture-handler": "*",
     "react-native-safe-area-context": "*",
     "react-native-screens": "*",
-    "react-native-svg": "*"
+    "react-native-svg": "*",
+    "tailwindcss": "*"
   },
   "name": "kdm",
   "private": true,

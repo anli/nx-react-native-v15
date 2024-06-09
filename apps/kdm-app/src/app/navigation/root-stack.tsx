@@ -22,8 +22,7 @@ export const RootStack = () => (
 
 const HomePage = () => {
   return (
-
-    <View>
+    <View className='pt-4'>
       <Text>Text</Text>
     </View>
   );
