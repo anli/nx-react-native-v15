@@ -3,7 +3,7 @@
   "name": "kdm",
   "projectType": "application",
   "sourceRoot": "apps/kdm-app/src",
-  "tags": [],
+  "tags": ["type:app"],
   "targets": {
     "clean": {
       "executor": "nx:run-commands",

@@ -1,8 +1,8 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createStackNavigator } from '@react-navigation/stack';
+import { Button, SafeAreaView, Text } from '@shared/ui';
 import React from 'react';
-import { Platform, Text, View } from 'react-native';
-import { FAB } from 'react-native-paper';
+import { Platform, View } from 'react-native';
 
 const Stack =
   Platform.OS === 'ios' ? createNativeStackNavigator() : createStackNavigator();
@@ -23,9 +23,11 @@ export const RootStack = () => (
 
 const HomePage = () => {
   return (
-    <View className='pt-4'>
-      <Text>Text</Text>
-      <FAB icon="plus" />
-    </View>
+    <SafeAreaView edges={['top', 'bottom']}>
+      <View>
+        <Text>Text</Text>
+      </View>
+      <Button.FAB icon="plus" />
+    </SafeAreaView>
   );
 };

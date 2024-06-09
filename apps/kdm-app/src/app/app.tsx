@@ -1,14 +1,14 @@
 import { NavigationContainer } from '@react-navigation/native';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { PaperProvider } from 'react-native-paper';
+import { GestureHandlerRootView, StatusBar, ThemeProvider } from '@shared/ui';
 import { RootStack } from './navigation';
 
 export const App = () => (
-  <GestureHandlerRootView style={{ flex: 1 }}>
-    <PaperProvider>
+  <GestureHandlerRootView>
+    <ThemeProvider>
+      <StatusBar />
       <NavigationContainer>
         <RootStack />
       </NavigationContainer>
-    </PaperProvider>
+    </ThemeProvider>
   </GestureHandlerRootView>
 );
