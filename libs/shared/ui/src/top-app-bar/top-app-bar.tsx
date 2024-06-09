@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import { FC, ReactNode } from 'react';
 import { Appbar, AppbarProps } from 'react-native-paper';
 
@@ -14,13 +15,17 @@ const TopAppBarComponent: FC<TopAppBarProps> = ({
   LeadingComponent,
   TrailingComponent,
   ...rest
-}) => (
-  <Appbar.Header mode={variant} {...rest}>
-    {LeadingComponent}
-    <Appbar.Content title={title} />
-    {TrailingComponent}
-  </Appbar.Header>
-);
+}) => {
+  const { canGoBack, goBack } = useNavigation();
+  return (
+    <Appbar.Header mode={variant} {...rest}>
+      {canGoBack() && <Appbar.BackAction onPress={goBack} />}
+      {LeadingComponent}
+      <Appbar.Content title={title} />
+      {TrailingComponent}
+    </Appbar.Header>
+  );
+};
 
 export const TopAppBar = Object.assign(TopAppBarComponent, {
   BackAction: Appbar.BackAction,
