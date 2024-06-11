@@ -1,3 +1,5 @@
+const { plugin } = require('postcss');
+
 module.exports = function (api) {
   api.cache(true);
 
@@ -15,6 +17,7 @@ module.exports = function (api) {
         ],
         'nativewind/babel',
       ],
+      plugins: ['react-native-reanimated/plugin'],
     };
   }
 
@@ -23,5 +26,6 @@ module.exports = function (api) {
       ['module:@react-native/babel-preset', { useTransformReactJSX: true }],
       'nativewind/babel',
     ],
+    plugins: ['react-native-reanimated/plugin'],
   };
 };

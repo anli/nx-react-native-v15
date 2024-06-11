@@ -1,5 +1,8 @@
 {
   "dependencies": {
+    "@candlefinance/faster-image": "*",
+    "@nx/react": "*",
+    "@nx/webpack": "*",
     "@react-native/metro-config": "*",
     "@react-navigation/native": "*",
     "@react-navigation/native-stack": "*",
@@ -9,15 +12,20 @@
     "metro-config": "*",
     "nativewind": "*",
     "react": "*",
+    "react-dom": "*",
     "react-native": "*",
     "react-native-gesture-handler": "*",
     "react-native-paper": "*",
+    "react-native-reanimated": "*",
     "react-native-safe-area-context": "*",
     "react-native-screens": "*",
     "react-native-svg": "*",
+    "react-native-svg-transformer": "*",
     "react-native-vector-icons": "*",
-    "tailwindcss": "*"
+    "tailwindcss": "*",
+    "postcss": "*"
   },
+  "devDependencies": {},
   "name": "kdm",
   "private": true,
   "version": "0.0.1"
