@@ -4,6 +4,7 @@
     "@react-navigation/native": "^6.1.17",
     "@react-navigation/native-stack": "^6.9.26",
     "@react-navigation/stack": "^6.3.29",
+    "expo": "^51.0.14",
     "nativewind": "^4.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -73,6 +74,7 @@
   "scripts": {
     "ci": "nx affected:lint --fix && nx format:write && nx affected:build",
     "clean": "nx clean",
+    "pod-install": "nx pod-install",
     "start": "nx start"
   },
   "version": "0.0.0"
