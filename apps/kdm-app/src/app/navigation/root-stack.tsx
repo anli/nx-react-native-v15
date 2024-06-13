@@ -1,4 +1,12 @@
-import { CardPage, GearPage, PrinciplePage } from '@pages/kdm';
+import {
+  CardPage,
+  GearPage,
+  InnovationPage,
+  PrinciplePage,
+  SettlementEventPage,
+  SettlementLocationPage,
+  WeaponSpecializationPage,
+} from '@pages/kdm';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {
   TransitionPresets,
@@ -25,6 +33,19 @@ export const RootStack = () => (
     <Stack.Screen name="BottomTabs" component={BottomTabs} />
     <Stack.Screen name="KdmPrinciplePage" component={PrinciplePage} />
     <Stack.Screen name="KdmGearPage" component={GearPage} />
+    <Stack.Screen name="KdmInnovationPage" component={InnovationPage} />
+    <Stack.Screen
+      name="KdmSettlementEventPage"
+      component={SettlementEventPage}
+    />
+    <Stack.Screen
+      name="KdmSettlementLocationPage"
+      component={SettlementLocationPage}
+    />
+    <Stack.Screen
+      name="KdmWeaponSpecializationPage"
+      component={WeaponSpecializationPage}
+    />
     {/* @ts-expect-error value Stack typing */}
     <Stack.Group screenOptions={modalScreenOptions}>
       <Stack.Screen name="KdmCardPage" component={CardPage} />

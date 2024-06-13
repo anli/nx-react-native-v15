@@ -1,10 +1,13 @@
 import { useGears } from '@entities/kdm';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import { List, SafeAreaView, TopAppBar } from '@shared/ui';
 import { FlatList } from 'react-native';
 
 export const GearPage = () => {
   const { navigate } = useNavigation();
+  const {
+    params: { aspectRatio },
+  } = useRoute<ReactNavigation.RouteProps<'KdmGearPage'>>();
   const { data: gears } = useGears();
 
   return (
@@ -19,7 +22,7 @@ export const GearPage = () => {
               title={name}
               description={location}
               onPress={() => {
-                navigate('KdmCardPage', { imageUrl });
+                navigate('KdmCardPage', { imageUrl, aspectRatio });
               }}
             />
           );
