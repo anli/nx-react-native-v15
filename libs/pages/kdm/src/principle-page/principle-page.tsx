@@ -1,60 +1,17 @@
+import { usePrinciples } from '@entities/kdm';
 import { useNavigation } from '@react-navigation/native';
-import { Image, List, SafeAreaView, TopAppBar } from '@shared/ui';
+import { List, SafeAreaView, TopAppBar } from '@shared/ui';
 import { FlatList } from 'react-native';
-
-const data = [
-  {
-    imageUrl: 'https://imgur.com/yFC0RJw.png',
-    name: 'Protect the Young',
-    type: 'New Life',
-  },
-  {
-    imageUrl: 'https://imgur.com/3J7hf4Q.png',
-    name: 'Survival of the Fittest',
-    type: 'New Life',
-  },
-  {
-    imageUrl: 'https://imgur.com/6WbK6SI.png',
-    name: 'Graves',
-    type: 'Death',
-  },
-  {
-    imageUrl: 'https://imgur.com/UnpL9tO.png',
-    name: 'Cannibalize',
-    type: 'Death',
-  },
-  {
-    imageUrl: 'https://imgur.com/1XLzyd5.png',
-    name: 'Barbaric',
-    type: 'Conviction',
-  },
-  {
-    imageUrl: 'https://imgur.com/DwRJvjy.png',
-    name: 'Romantic',
-    type: 'Conviction',
-  },
-  {
-    imageUrl: 'https://imgur.com/vMSBB8T.png',
-    name: 'Accept Darkness',
-    type: 'Society',
-  },
-  {
-    imageUrl: 'https://imgur.com/4ccckFI.png',
-    name: 'Collective Toll',
-    type: 'Society',
-  },
-];
-
-Image.prefetch(data.map((_item) => _item.imageUrl));
 
 export const PrinciplePage = () => {
   const { navigate } = useNavigation();
+  const { data: principles } = usePrinciples();
 
   return (
     <SafeAreaView>
       <TopAppBar variant="small" title="Principles" />
       <FlatList
-        data={data}
+        data={principles}
         keyExtractor={(item) => item.name}
         renderItem={({ item: { name, type, imageUrl } }) => {
           return (

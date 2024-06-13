@@ -1,4 +1,5 @@
 {
   "name": "Kdm",
-  "displayName": "KDM"
+  "displayName": "KDM",
+  "userInterfaceStyle": "automatic"
 }

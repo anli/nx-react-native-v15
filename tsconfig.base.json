@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@entities/kdm": ["libs/entities/kdm/src/index.ts"],
       "@pages/kdm": ["libs/pages/kdm/src/index.ts"],
       "@shared/ui": ["libs/shared/ui/src/index.ts"]
     }

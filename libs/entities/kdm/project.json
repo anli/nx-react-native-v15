@@ -1,0 +1,8 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "name": "entities-kdm",
+  "projectType": "library",
+  "sourceRoot": "libs/entities/kdm/src",
+  "tags": ["type:entities"],
+  "targets": {}
+}
