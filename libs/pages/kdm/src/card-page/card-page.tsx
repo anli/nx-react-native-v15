@@ -1,11 +1,10 @@
-import { cardAspectRatio } from '@entities/kdm';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { Button, Image, SafeAreaView } from '@shared/ui';
 import { useWindowDimensions } from 'react-native';
 
 export const CardPage = () => {
   const {
-    params: { imageUrl },
+    params: { imageUrl, aspectRatio = 1 },
   } = useRoute<ReactNavigation.RouteProps<'KdmCardPage'>>();
   const { canGoBack, goBack } = useNavigation();
   const { width } = useWindowDimensions();
@@ -18,7 +17,7 @@ export const CardPage = () => {
         }}
         contentFit="fill"
         style={{
-          aspectRatio: cardAspectRatio,
+          aspectRatio,
           width,
         }}
       />

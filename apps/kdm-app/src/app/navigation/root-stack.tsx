@@ -1,4 +1,4 @@
-import { CardPage, PrinciplePage } from '@pages/kdm';
+import { CardPage, GearPage, PrinciplePage } from '@pages/kdm';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {
   TransitionPresets,
@@ -24,6 +24,7 @@ export const RootStack = () => (
   <Stack.Navigator screenOptions={pageScreenOptions}>
     <Stack.Screen name="BottomTabs" component={BottomTabs} />
     <Stack.Screen name="KdmPrinciplePage" component={PrinciplePage} />
+    <Stack.Screen name="KdmGearPage" component={GearPage} />
     {/* @ts-expect-error value Stack typing */}
     <Stack.Group screenOptions={modalScreenOptions}>
       <Stack.Screen name="KdmCardPage" component={CardPage} />

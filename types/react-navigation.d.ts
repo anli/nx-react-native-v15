@@ -1,9 +1,10 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 export type RootStackParamList = {
-  KdmReferencePage: undefined;
+  KdmCardPage: { imageUrl: string; aspectRatio?: number };
+  KdmGearPage: undefined;
   KdmPrinciplePage: undefined;
-  KdmCardPage: { imageUrl: string };
+  KdmReferencePage: undefined;
 };
 
 declare global {

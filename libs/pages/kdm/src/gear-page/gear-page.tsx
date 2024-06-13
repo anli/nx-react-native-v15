@@ -1,28 +1,25 @@
-import { cardAspectRatio, usePrinciples } from '@entities/kdm';
+import { useGears } from '@entities/kdm';
 import { useNavigation } from '@react-navigation/native';
 import { List, SafeAreaView, TopAppBar } from '@shared/ui';
 import { FlatList } from 'react-native';
 
-export const PrinciplePage = () => {
+export const GearPage = () => {
   const { navigate } = useNavigation();
-  const { data: principles } = usePrinciples();
+  const { data: gears } = useGears();
 
   return (
     <SafeAreaView>
-      <TopAppBar variant="small" title="Principles" />
+      <TopAppBar variant="small" title="Gears" />
       <FlatList
-        data={principles}
+        data={gears}
         keyExtractor={(item) => item.name}
-        renderItem={({ item: { name, type, imageUrl } }) => {
+        renderItem={({ item: { name, location, imageUrl } }) => {
           return (
             <List.Item
               title={name}
-              description={type}
+              description={location}
               onPress={() => {
-                navigate('KdmCardPage', {
-                  imageUrl,
-                  aspectRatio: cardAspectRatio,
-                });
+                navigate('KdmCardPage', { imageUrl });
               }}
             />
           );

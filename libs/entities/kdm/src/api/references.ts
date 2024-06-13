@@ -4,7 +4,7 @@ export const references = [
     description:
       "Principles are your settlement's guiding philosophies and a type of innovation.",
     iconName: 'scale-balance',
-    pageName: 'KdmPrinciplePage' as const,
+    type: 'principle',
   },
   {
     name: 'Innovations',
@@ -34,6 +34,7 @@ export const references = [
     description:
       'Objects that survivors may carry and wear, represented by gear cards.',
     iconName: 'tshirt-crew',
+    type: 'gear',
   },
   {
     name: 'Monster AI',

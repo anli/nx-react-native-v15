@@ -7,8 +7,15 @@ export const ReferencePage = () => {
   const { navigate } = useNavigation();
   const { data: references } = useReferences();
 
-  const handlePress = (pageName: 'KdmPrinciplePage') => {
-    navigate(pageName);
+  const handlePress = (type?: string) => {
+    switch (type) {
+      case 'principle':
+        return navigate('KdmPrinciplePage');
+      case 'gear':
+        return navigate('KdmGearPage');
+      default:
+        return;
+    }
   };
 
   return (
@@ -17,7 +24,7 @@ export const ReferencePage = () => {
       <FlatList
         data={references}
         keyExtractor={(item) => item.name}
-        renderItem={({ item: { name, description, iconName, pageName } }) => {
+        renderItem={({ item: { name, description, iconName, type } }) => {
           return (
             <List.Item
               titleNumberOfLines={1}
@@ -25,7 +32,7 @@ export const ReferencePage = () => {
               title={name}
               description={description}
               left={getListItemIcon(iconName)}
-              onPress={() => pageName && handlePress(pageName)}
+              onPress={() => handlePress(type)}
             />
           );
         }}
