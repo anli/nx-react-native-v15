@@ -1,6 +1,5 @@
-import { FasterImageView } from '@candlefinance/faster-image';
-import { useRoute } from '@react-navigation/native';
-import { SafeAreaView } from '@shared/ui';
+import { useNavigation, useRoute } from '@react-navigation/native';
+import { Button, Image, SafeAreaView } from '@shared/ui';
 import { useWindowDimensions } from 'react-native';
 
 const aspectRatio = 0.637;
@@ -9,22 +8,29 @@ export const CardPage = () => {
   const {
     params: { imageUrl },
   } = useRoute<ReactNavigation.RouteProps<'KdmCardPage'>>();
+  const { canGoBack, goBack } = useNavigation();
   const { width } = useWindowDimensions();
 
   return (
     <SafeAreaView>
-      <FasterImageView
+      <Image
         source={{
-          url: imageUrl,
-          showActivityIndicator: true,
-          progressiveLoadingEnabled: true,
+          uri: imageUrl,
         }}
+        contentFit="fill"
         style={{
-          resizeMode: 'contain',
           aspectRatio,
           width,
         }}
       />
+      {canGoBack() && (
+        <Button.Icon
+          mode="contained-tonal"
+          className="absolute right-2 top-2"
+          icon="close"
+          onPress={() => goBack()}
+        />
+      )}
     </SafeAreaView>
   );
 };

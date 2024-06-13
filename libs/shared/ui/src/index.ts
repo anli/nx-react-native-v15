@@ -3,6 +3,7 @@ export * from './checkbox';
 export * from './divider';
 export * from './gesture-handler-root-view';
 export * from './icon';
+export * from './image';
 export * from './list';
 export * from './safe-area-view';
 export * from './status-bar';

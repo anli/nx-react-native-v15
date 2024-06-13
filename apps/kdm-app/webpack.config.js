@@ -11,6 +11,8 @@ module.exports = {
         // Add every directory that needs to be compiled by Babel during the build.
         include: [
           path.resolve(appDirectory, 'node_modules/react-native-vector-icons'),
+          path.resolve(appDirectory, 'node_modules/expo-image'),
+          path.resolve(appDirectory, 'node_modules/expo'),
         ],
         use: {
           loader: 'babel-loader',
@@ -35,6 +37,9 @@ module.exports = {
       'react-native$': 'react-native-web',
     },
     extensions: ['.web.tsx', '.web.ts', '.web.jsx', '.web.js'],
+    fallback: {
+      crypto: false,
+    },
   },
   devServer: {
     port: 4200,

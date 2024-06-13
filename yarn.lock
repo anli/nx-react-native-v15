@@ -1249,11 +1249,6 @@
     deepmerge "^3.2.0"
     hoist-non-react-statics "^3.3.0"
 
-"@candlefinance/faster-image@^1.6.1":
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/@candlefinance/faster-image/-/faster-image-1.6.1.tgz#f5cfe7d0d58de29012eb81693d88eeb25a70016b"
-  integrity sha512-Fuic0FP01ealMKvzhx//Vsw5NUKY0b919Y7dpERhhG8HJewDneSHV9A6BJyOtDLZxNj0HaWi3pWmeLer3G0Jkg==
-
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/@cspotcode/source-map-support/-/source-map-support-0.8.1.tgz#00629c35a688e05a88b1cda684fb9d5e73f000a1"
@@ -6206,6 +6201,11 @@ expo-font@~12.0.7:
   integrity sha512-rbSdpjtT/A3M+u9xchR9tdD+5VGSxptUis7ngX5zfAVp3O5atOcPNSA82Jeo15HkrQE+w/upfFBOvi56lsGdsQ==
   dependencies:
     fontfaceobserver "^2.1.0"
+
+expo-image@^1.12.12:
+  version "1.12.12"
+  resolved "https://registry.yarnpkg.com/expo-image/-/expo-image-1.12.12.tgz#b6422a07da0f6dddcea154d2857f617086a527cc"
+  integrity sha512-zZutUhKYqcqTH12o87pGCVLsuQeRK2vaNwxa8beznbDnmWevm3dmbOTCxaOhGgjyDxwcdwDa483Q4IKCXL6tBw==
 
 expo-keep-awake@~13.0.2:
   version "13.0.2"

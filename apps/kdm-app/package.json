@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "@candlefinance/faster-image": "*",
     "@nx/react": "*",
     "@nx/webpack": "*",
     "@react-native/metro-config": "*",
@@ -10,6 +9,7 @@
     "@testing-library/jest-native": "*",
     "@testing-library/react-native": "*",
     "expo": "*",
+    "expo-image": "*",
     "metro-config": "*",
     "nativewind": "*",
     "postcss": "*",

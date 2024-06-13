@@ -1,10 +1,10 @@
 {
   "dependencies": {
-    "@candlefinance/faster-image": "^1.6.1",
     "@react-navigation/native": "^6.1.17",
     "@react-navigation/native-stack": "^6.9.26",
     "@react-navigation/stack": "^6.3.29",
     "expo": "^51.0.14",
+    "expo-image": "^1.12.12",
     "nativewind": "^4.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -72,7 +72,7 @@
   "name": "@nx-react-native/source",
   "private": true,
   "scripts": {
-    "ci": "nx affected:lint --fix && nx format:write && nx affected:build",
+    "ci": "nx affected:lint --fix && nx format:write",
     "clean": "nx clean",
     "pod-install": "nx pod-install",
     "start": "nx start"

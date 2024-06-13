@@ -1,5 +1,5 @@
 import { useNavigation } from '@react-navigation/native';
-import { List, SafeAreaView, TopAppBar } from '@shared/ui';
+import { Image, List, SafeAreaView, TopAppBar } from '@shared/ui';
 import { FlatList } from 'react-native';
 
 const data = [
@@ -44,6 +44,8 @@ const data = [
     type: 'Society',
   },
 ];
+
+Image.prefetch(data.map((_item) => _item.imageUrl));
 
 export const PrinciplePage = () => {
   const { navigate } = useNavigation();
