@@ -2,6 +2,8 @@ import {
   CardPage,
   GearPage,
   InnovationPage,
+  MonsterAiPage,
+  MonsterHitLocationPage,
   PrinciplePage,
   SettlementEventPage,
   SettlementLocationPage,
@@ -34,6 +36,11 @@ export const RootStack = () => (
     <Stack.Screen name="KdmPrinciplePage" component={PrinciplePage} />
     <Stack.Screen name="KdmGearPage" component={GearPage} />
     <Stack.Screen name="KdmInnovationPage" component={InnovationPage} />
+    <Stack.Screen name="KdmMonsterAiPage" component={MonsterAiPage} />
+    <Stack.Screen
+      name="KdmMonsterHitLocationPage"
+      component={MonsterHitLocationPage}
+    />
     <Stack.Screen
       name="KdmSettlementEventPage"
       component={SettlementEventPage}

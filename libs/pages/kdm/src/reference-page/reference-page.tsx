@@ -13,6 +13,10 @@ export const ReferencePage = () => {
         return navigate('KdmGearPage', { aspectRatio });
       case 'innovation':
         return navigate('KdmInnovationPage', { aspectRatio });
+      case 'monsterAi':
+        return navigate('KdmMonsterAiPage', { aspectRatio });
+      case 'monsterHitLocation':
+        return navigate('KdmMonsterHitLocationPage', { aspectRatio });
       case 'principle':
         return navigate('KdmPrinciplePage', { aspectRatio });
       case 'settlementEvent':

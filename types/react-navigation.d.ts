@@ -4,6 +4,8 @@ export type RootStackParamList = {
   KdmCardPage: { imageUrl: string; aspectRatio?: number };
   KdmGearPage: { aspectRatio: number };
   KdmInnovationPage: { aspectRatio: number };
+  KdmMonsterAiPage: { aspectRatio: number };
+  KdmMonsterHitLocationPage: { aspectRatio: number };
   KdmPrinciplePage: { aspectRatio: number };
   KdmReferencePage: { aspectRatio: number };
   KdmSettlementEventPage: { aspectRatio: number };

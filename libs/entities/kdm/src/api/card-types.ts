@@ -54,6 +54,7 @@ export const cardTypes = [
     name: 'Monster AI',
     description: 'An AI card belongs to the AI Deck.',
     iconName: 'chess-queen',
+    type: 'monsterAi',
     aspectRatio: cardAspectRatio,
   },
   {
@@ -61,6 +62,7 @@ export const cardTypes = [
     description:
       'Each monster has a unique hit location deck composed of hit location cards. ',
     iconName: 'medical-bag',
+    type: 'monsterHitLocation',
     aspectRatio: cardAspectRatio,
   },
 ];
