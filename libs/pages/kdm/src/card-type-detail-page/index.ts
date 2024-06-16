@@ -1,2 +1,1 @@
 export * from './card-type-detail-page';
-export * from './reference-page';

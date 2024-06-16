@@ -1,6 +1,8 @@
+import { CardType } from '@entities/kdm';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 export type RootStackParamList = {
+  KdmCardTypeDetailPage: { cardTypeId: CardType['id'] };
   KdmCardPage: { imageUrl: string; aspectRatio?: number };
   KdmGearPage: { aspectRatio: number };
   KdmInnovationPage: { aspectRatio: number };

@@ -1,6 +1,8 @@
 import { NavigationContainer } from '@react-navigation/native';
 import {
   GestureHandlerRootView,
+  ImageModal,
+  ModalProvider,
   StatusBar,
   ThemeProvider,
   useTheme,
@@ -13,6 +15,9 @@ export const App = () => {
   return (
     <GestureHandlerRootView>
       <ThemeProvider>
+        <ModalProvider>
+          <ImageModal />
+        </ModalProvider>
         <StatusBar />
         <NavigationContainer theme={theme}>
           <RootStack />

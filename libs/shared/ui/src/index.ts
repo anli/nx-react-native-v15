@@ -5,6 +5,7 @@ export * from './gesture-handler-root-view';
 export * from './icon';
 export * from './image';
 export * from './list';
+export * from './modal';
 export * from './safe-area-view';
 export * from './status-bar';
 export * from './text';
