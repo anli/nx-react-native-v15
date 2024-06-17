@@ -14,7 +14,7 @@
     ],
     "sharedGlobals": []
   },
-  "nxCloudAccessToken": "MzMwMDMwMGMtZWM4Mi00ODkxLTkzMjQtOTA3MGZiNDMxMGU1fHJlYWQtd3JpdGU=",
+  "nxCloudAccessToken": "ZDlhYjc0MTctNzY5Yi00MTRjLTg0MmUtZDliYTVkN2VjNDZifHJlYWQtd3JpdGU=",
   "plugins": [
     {
       "plugin": "@nx/react-native/plugin",

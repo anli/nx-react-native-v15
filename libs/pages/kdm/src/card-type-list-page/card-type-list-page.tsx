@@ -3,7 +3,7 @@ import { useNavigation } from '@react-navigation/native';
 import { List, SafeAreaView, TopAppBar, getListItemIcon } from '@shared/ui';
 import { FlatList } from 'react-native-gesture-handler';
 
-export const ReferencePage = () => {
+export const KdmCardTypeListPage = () => {
   const { navigate } = useNavigation();
   const { data: cardTypes } = useKdmCardTypes();
 

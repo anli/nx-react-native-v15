@@ -3,16 +3,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 export type RootStackParamList = {
   KdmCardTypeDetailPage: { cardTypeId: CardType['id'] };
-  KdmCardPage: { imageUrl: string; aspectRatio?: number };
-  KdmGearPage: { aspectRatio: number };
-  KdmInnovationPage: { aspectRatio: number };
-  KdmMonsterAiPage: { aspectRatio: number };
-  KdmMonsterHitLocationPage: { aspectRatio: number };
-  KdmPrinciplePage: { aspectRatio: number };
-  KdmReferencePage: { aspectRatio: number };
-  KdmSettlementEventPage: { aspectRatio: number };
-  KdmSettlementLocationPage: { aspectRatio: number };
-  KdmWeaponSpecializationPage: { aspectRatio: number };
+  KdmCardTypeListPage: undefined;
 };
 
 declare global {

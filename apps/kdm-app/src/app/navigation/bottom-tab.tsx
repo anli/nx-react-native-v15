@@ -1,4 +1,4 @@
-import { ReferencePage } from '@pages/kdm';
+import { KdmCardTypeListPage } from '@pages/kdm';
 import { Icon } from '@shared/ui';
 import { createMaterialBottomTabNavigator } from 'react-native-paper/react-navigation';
 
@@ -16,9 +16,9 @@ const getTabBarIcon =
 
 const configs = [
   {
-    name: 'ReferenceTab',
-    component: ReferencePage,
-    tabBarLabel: 'Reference',
+    name: 'KdmCardTypeListTab',
+    component: KdmCardTypeListPage,
+    tabBarLabel: 'Cards',
     tabBarIcon: getTabBarIcon('book', 'book-outline'),
   },
 ];
@@ -26,7 +26,7 @@ const configs = [
 export const BottomTabs = () => {
   return (
     <Tab.Navigator
-      initialRouteName="KdmReferenceStack"
+      initialRouteName="KdmCardTypeListTab"
       safeAreaInsets={{ bottom: 16 }}
     >
       {configs.map((_config) => (
