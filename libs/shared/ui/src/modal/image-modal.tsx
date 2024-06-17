@@ -11,6 +11,7 @@ type ImageModalParams = {
 
 const modalId = 'ImageModal';
 const margin = 16;
+const borderRadius = 16
 
 const ImageModalComponent = () => {
   const [visible, setVisible] = useState(false);
@@ -51,6 +52,7 @@ const ImageModalComponent = () => {
       contentContainerStyle={{
         backgroundColor: theme.colors.background,
         margin,
+        borderRadius
       }}
     >
       <Pressable onPress={handleDismiss}>
@@ -62,6 +64,7 @@ const ImageModalComponent = () => {
           style={{
             aspectRatio,
             width,
+            borderRadius
           }}
         />
       </Pressable>
