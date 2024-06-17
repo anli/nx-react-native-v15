@@ -1,3 +1,7 @@
+import { mediumAspectRatio } from './card-types';
+
+export type Monster = (typeof monsters)[number];
+
 export const monsters = [
   {
     id: 'whiteLion',
@@ -5,26 +9,37 @@ export const monsters = [
   },
 ];
 
+export type Encounter = (typeof encounters)[number];
+
 export const encounters = [
   {
-    id: 'WHITE_LION_FIRST_STORY',
+    id: 'WHITE_LION_FIRST_STORY' as const,
     monsterId: 'whiteLion',
     name: 'First Story',
+    basicActiveIds: ['WHITE_LION_MONSTER', 'WHITE_LION_BASIC_ACTION'],
+    imageUrl: 'https://imgur.com/6voXSGA.png',
+    aspectRatio: mediumAspectRatio,
   },
   {
-    id: 'WHITE_LION_LEVEL_1',
+    id: 'WHITE_LION_LEVEL_1' as const,
     monsterId: 'whiteLion',
     name: 'Level 1',
+    imageUrl: 'https://imgur.com/6voXSGA.png',
+    aspectRatio: mediumAspectRatio,
   },
   {
-    id: 'WHITE_LION_LEVEL_2',
+    id: 'WHITE_LION_LEVEL_2' as const,
     monsterId: 'whiteLion',
     name: 'Level 2',
+    imageUrl: 'https://imgur.com/6voXSGA.png',
+    aspectRatio: mediumAspectRatio,
   },
   {
-    id: 'WHITE_LION_LEVEL_3',
+    id: 'WHITE_LION_LEVEL_3' as const,
     monsterId: 'whiteLion',
     name: 'Level 3',
+    imageUrl: 'https://imgur.com/6voXSGA.png',
+    aspectRatio: mediumAspectRatio,
   },
 ];
 

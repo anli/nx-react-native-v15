@@ -1,12 +1,13 @@
 import { useNavigation } from '@react-navigation/native';
 import { FC, ReactNode } from 'react';
-import { Appbar, AppbarProps } from 'react-native-paper';
+import { Appbar, AppbarHeaderProps } from 'react-native-paper';
 
-type TopAppBarProps = Omit<AppbarProps, 'mode' | 'children'> & {
-  variant: AppbarProps['mode'];
+type TopAppBarProps = Omit<AppbarHeaderProps, 'mode' | 'children'> & {
+  variant: AppbarHeaderProps['mode'];
   title: string;
   LeadingComponent?: ReactNode;
   TrailingComponent?: ReactNode;
+  hideBack?: boolean;
 };
 
 const TopAppBarComponent: FC<TopAppBarProps> = ({
@@ -14,12 +15,13 @@ const TopAppBarComponent: FC<TopAppBarProps> = ({
   title,
   LeadingComponent,
   TrailingComponent,
+  hideBack = false,
   ...rest
 }) => {
   const { canGoBack, goBack } = useNavigation();
   return (
     <Appbar.Header mode={variant} {...rest}>
-      {canGoBack() && <Appbar.BackAction onPress={goBack} />}
+      {!hideBack && canGoBack() && <Appbar.BackAction onPress={goBack} />}
       {LeadingComponent}
       <Appbar.Content title={title} />
       {TrailingComponent}

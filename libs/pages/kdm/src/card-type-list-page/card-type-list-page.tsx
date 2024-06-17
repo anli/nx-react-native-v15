@@ -13,7 +13,7 @@ export const KdmCardTypeListPage = () => {
 
   return (
     <SafeAreaView edges={[]}>
-      <TopAppBar variant="medium" title="Reference" />
+      <TopAppBar variant="small" title="Cards" hideBack />
       <FlatList
         data={cardTypes}
         keyExtractor={(item) => item.name}

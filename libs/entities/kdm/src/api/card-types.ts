@@ -1,6 +1,6 @@
-const smallAspectRatio = 1;
-const mediumAspectRatio = 0.637;
-const largeAspectRatio = 0.55;
+export const smallAspectRatio = 1;
+export const mediumAspectRatio = 0.637;
+export const largeAspectRatio = 0.55;
 
 export type KdmCardType = (typeof kdmCardTypes)[number];
 

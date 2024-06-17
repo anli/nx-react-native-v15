@@ -1,22 +1,13 @@
-import { KdmCardTypeDetailPage } from '@pages/kdm';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createStackNavigator } from '@react-navigation/stack';
+import { KdmCardSelectPage } from '@pages/kdm';
 import React from 'react';
-import { Platform } from 'react-native';
-import { BottomTabs } from './bottom-tab';
-
-const pageScreenOptions = {
-  headerShown: false,
-};
-const Stack =
-  Platform.OS === 'ios' ? createNativeStackNavigator() : createStackNavigator();
+import { BottomTabs, Stack, pageScreenOptions } from './bottom-tab';
 
 export const RootStack = () => (
-  <Stack.Navigator screenOptions={pageScreenOptions}>
+  <Stack.Navigator
+    screenOptions={pageScreenOptions}
+    initialRouteName="BottomTabs"
+  >
     <Stack.Screen name="BottomTabs" component={BottomTabs} />
-    <Stack.Screen
-      name="KdmCardTypeDetailPage"
-      component={KdmCardTypeDetailPage}
-    />
+    <Stack.Screen name="KdmCardSelectPage" component={KdmCardSelectPage} />
   </Stack.Navigator>
 );

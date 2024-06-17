@@ -1,4 +1,5 @@
 export * from './use-card-types';
+export * from './use-encounters';
 export * from './use-gears';
 export * from './use-innovations';
 export * from './use-monsters';
