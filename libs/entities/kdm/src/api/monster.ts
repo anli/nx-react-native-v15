@@ -43,22 +43,20 @@ export const encounters = [
   },
 ];
 
+export type MonsterBasic = (typeof monsterBasics)[number];
+
 export const monsterBasics = [
-  {
-    id: 'WHITE_LION_MONSTER',
-    imageUrl: 'https://imgur.com/6voXSGA.png',
-    name: 'White Lion Monster',
-    type: 'BASIC',
-    monsterId: 'whiteLion',
-  },
   {
     id: 'WHITE_LION_BASIC_ACTION',
     imageUrl: 'https://imgur.com/rmgHnYU.png',
-    name: 'White Lion Basic Action',
+    name: 'Basic Action',
     type: 'BASIC',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
 ];
+
+export type MonsterAi = (typeof monsterAis)[number];
 
 export const monsterAis = [
   {
@@ -69,6 +67,7 @@ export const monsterAis = [
     subType: 'MOOD',
     level: 'A',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_BAT_AROUND',
@@ -78,6 +77,7 @@ export const monsterAis = [
     subType: 'NONE',
     level: 'B',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_BLOODTHIRSTY',
@@ -88,6 +88,7 @@ export const monsterAis = [
     level: 'A',
     token: 0,
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_BLOODY_CLAW',
@@ -97,6 +98,7 @@ export const monsterAis = [
     subType: 'NONE',
     level: 'A',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_COMBO_CLAW',
@@ -106,6 +108,7 @@ export const monsterAis = [
     subType: 'NONE',
     level: 'B',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_CUNNING',
@@ -115,6 +118,7 @@ export const monsterAis = [
     subType: 'TRAIT',
     level: 'S',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_GOLDEN_EYES',
@@ -124,6 +128,7 @@ export const monsterAis = [
     subType: 'TRAIT',
     level: 'L',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_GROUND_FIGHTING',
@@ -133,6 +138,7 @@ export const monsterAis = [
     subType: 'MOOD',
     level: 'A',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_LICK_WOUNDS',
@@ -143,6 +149,7 @@ export const monsterAis = [
     level: 'A',
     heal: 1,
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_MERCILESS',
@@ -152,6 +159,7 @@ export const monsterAis = [
     subType: 'TRAIT',
     level: 'S',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_REVENGE',
@@ -161,6 +169,7 @@ export const monsterAis = [
     subType: 'NONE',
     level: 'B',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_SMART_CAT',
@@ -170,6 +179,7 @@ export const monsterAis = [
     subType: 'NONE',
     level: 'A',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_VANISH',
@@ -179,6 +189,7 @@ export const monsterAis = [
     subType: 'DURATION',
     level: 'L',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_VICIOUS_CLAW',
@@ -188,6 +199,7 @@ export const monsterAis = [
     subType: 'NONE',
     level: 'B',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_CLAW',
@@ -197,6 +209,7 @@ export const monsterAis = [
     subType: 'NONE',
     level: 'B',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_CLAW_2',
@@ -206,6 +219,7 @@ export const monsterAis = [
     subType: 'NONE',
     level: 'B',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_CHOMP',
@@ -215,6 +229,7 @@ export const monsterAis = [
     subType: 'NONE',
     level: 'B',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_SIZE_UP',
@@ -224,6 +239,7 @@ export const monsterAis = [
     subType: 'NONE',
     level: 'B',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_SIZE_UP_2',
@@ -233,6 +249,7 @@ export const monsterAis = [
     subType: 'NONE',
     level: 'B',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_POWER_SWAT',
@@ -242,6 +259,7 @@ export const monsterAis = [
     subType: 'NONE',
     level: 'B',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_GRASP',
@@ -251,6 +269,7 @@ export const monsterAis = [
     subType: 'NONE',
     level: 'B',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_GRASP_2',
@@ -260,6 +279,7 @@ export const monsterAis = [
     subType: 'NONE',
     level: 'B',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_MAUL',
@@ -269,6 +289,7 @@ export const monsterAis = [
     subType: 'NONE',
     level: 'A',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_TERRIFYING_ROAR',
@@ -278,6 +299,7 @@ export const monsterAis = [
     subType: 'NONE',
     level: 'A',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
   {
     id: 'WHITE_LION_AI_ENRAGED',
@@ -287,8 +309,11 @@ export const monsterAis = [
     subType: 'MOOD',
     level: 'A',
     monsterId: 'whiteLion',
+    aspectRatio: mediumAspectRatio,
   },
 ];
+
+export type MonsterHitLocation = (typeof monsterHitLocations)[number];
 
 export const monsterHitLocations = [
   {
