@@ -15,10 +15,13 @@ export const KdmCardTypeDetailPage = () => {
       <FlatList
         data={cardType.cards}
         keyExtractor={(item) => item.id}
-        renderItem={({ item: { name, imageUrl } }) => {
+        renderItem={({ item }) => {
+          const { name, imageUrl } = item;
+
           return (
             <List.Item
               title={name}
+              description={item?.location ?? item?.monster?.name ?? item?.type}
               onPress={() => {
                 ImageModal.show({
                   imageUrl,

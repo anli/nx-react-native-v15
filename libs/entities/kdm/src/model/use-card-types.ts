@@ -3,36 +3,49 @@ import {
   gears,
   innovations,
   kdmCardTypes,
-  monsterAis,
-  monsterHitLocations,
   principles,
   settlementEvents,
   settlementLocations,
   weaponSpecializations,
 } from '../api';
+import { useMonsterAis, useMonsterHitLocations } from './use-monsters';
 
-const getCards = (
+const useCards = (
   id: KdmCardType['id']
-): { id: string; imageUrl: string; name: string }[] => {
+): {
+  data: {
+    id: string;
+    imageUrl: string;
+    name: string;
+    location?: string;
+    monster?: {
+      name: string;
+    };
+    type?: string;
+  }[];
+} => {
+  const { data: monsterAis } = useMonsterAis();
+  const { data: monsterHitLocations } = useMonsterHitLocations();
+
   switch (id) {
     case 'GEAR':
-      return gears;
+      return { data: gears };
     case 'INNOVATION':
-      return innovations;
+      return { data: innovations };
     case 'MONSTER_AI':
-      return monsterAis;
+      return { data: monsterAis };
     case 'MONSTER_HIT_LOCATION':
-      return monsterHitLocations;
+      return { data: monsterHitLocations };
     case 'PRINCIPLE':
-      return principles;
+      return { data: principles };
     case 'SETTLEMENT_EVENT':
-      return settlementEvents;
+      return { data: settlementEvents };
     case 'SETTLEMENT_LOCATION':
-      return settlementLocations;
+      return { data: settlementLocations };
     case 'WEAPON_SPECIALIZATION':
-      return weaponSpecializations;
+      return { data: weaponSpecializations };
     default:
-      return [];
+      return { data: [] };
   }
 };
 
@@ -45,6 +58,7 @@ export const useKdmCardTypes = () => {
 export const useKdmCardType = (id: KdmCardType['id']) => {
   const { data } = useKdmCardTypes();
   const item = data.find((_item) => _item.id === id);
+  const { data: cards } = useCards(id);
 
   return {
     data: {
@@ -54,7 +68,7 @@ export const useKdmCardType = (id: KdmCardType['id']) => {
       iconName: item?.iconName,
       type: item?.type,
       aspectRatio: item?.aspectRatio,
-      cards: getCards(id),
+      cards,
     },
   };
 };
